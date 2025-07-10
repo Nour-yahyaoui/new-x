@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 function HomePage() {
   return (
     <>
-      <div className="z-50 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">
+      <div className="-z-5 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={900}

@@ -1,6 +1,17 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { Home, User, Folder, Mail, Github, Linkedin, Twitter, Menu, X } from "lucide-react";
+import {
+  Home,
+  User,
+  Folder,
+  Mail,
+  Github,
+  Linkedin,
+  Menu,
+  X,
+  Instagram,
+} from "lucide-react";
 import { useState, useEffect } from "react";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,7 +20,10 @@ const Header = () => {
   // Close menu when clicking outside on mobile
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (isMenuOpen && !(event.target as Element).closest('.mobile-menu-container')) {
+      if (
+        isMenuOpen &&
+        !(event.target as Element).closest(".mobile-menu-container")
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -19,12 +33,12 @@ const Header = () => {
       setIsScrolled(window.scrollY > 10);
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    window.addEventListener('scroll', handleScroll);
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [isMenuOpen]);
 
@@ -36,32 +50,36 @@ const Header = () => {
   ];
 
   const socialIcons = [
-    { icon: <Github size={20} />, href: "https://github.com" },
-    { icon: <Linkedin size={20} />, href: "https://linkedin.com" },
-    { icon: <Twitter size={20} />, href: "https://twitter.com" },
+    { icon: <Github size={20} />, href: "https://github.com/nour-yahyaoui" },
+    {icon: <Instagram size={20} />, href: "https://instagram.com/nourr_yahyaouiii"},
+    {
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/in/nourr-yahyaoui-86987b36b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    { icon: <Mail size={20} />, href: "mailto:nourryahyaoui@gmail.com" },
   ];
 
   const menuVariants = {
-    open: { 
+    open: {
       opacity: 1,
-      y: '0',
-      transition: { 
-        type: "spring" as const, 
+      y: "0",
+      transition: {
+        type: "spring" as const,
         stiffness: 400,
         damping: 30,
         when: "beforeChildren" as const,
-        staggerChildren: 0.1
-      }
+        staggerChildren: 0.1,
+      },
     },
-    closed: { 
+    closed: {
       opacity: 0,
       y: "-100%",
-      transition: { 
-        type: "spring" as const, 
+      transition: {
+        type: "spring" as const,
         stiffness: 400,
         damping: 30,
-        when: "afterChildren" as const
-      } 
+        when: "afterChildren" as const,
+      },
     },
   };
 
@@ -76,7 +94,13 @@ const Header = () => {
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-black bg-opacity-70 backdrop-blur-md' : 'bg-transparent'}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-black bg-opacity-70 backdrop-blur-md"
+          : "bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-6 py-4">
         {/* Desktop Navigation */}
         <motion.nav
@@ -94,7 +118,11 @@ const Header = () => {
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 text-gray-300 hover:text-white text-sm font-medium transition-colors"
               >
-                <motion.span variants={iconVariants} whileHover="hover" whileTap="tap">
+                <motion.span
+                  variants={iconVariants}
+                  whileHover="hover"
+                  whileTap="tap"
+                >
                   {item.icon}
                 </motion.span>
                 <span>{item.name}</span>
@@ -172,14 +200,18 @@ const Header = () => {
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-4 text-gray-300 hover:text-white text-xl font-medium w-full justify-center"
                   >
-                    <motion.span variants={iconVariants} whileHover="hover" whileTap="tap">
+                    <motion.span
+                      variants={iconVariants}
+                      whileHover="hover"
+                      whileTap="tap"
+                    >
                       {item.icon}
                     </motion.span>
                     <span>{item.name}</span>
                   </motion.a>
                 ))}
 
-                <motion.div 
+                <motion.div
                   className="flex space-x-8 mt-12"
                   variants={itemVariants}
                 >
