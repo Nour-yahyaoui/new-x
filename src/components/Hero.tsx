@@ -24,13 +24,10 @@ export default function Hero() {
     "!important",
     "hacking microsoft",
     "mining crypto",
-    "border-radius: 99px",
+    "10/0 bugs fixed",
     "left: 50%; transform: translateX(-50%);",
     "console.log('why is this not working?')",
     "margin: 0 auto; /* magic */",
-    "/* Temporary fix */",
-    "z-index: 9999;",
-    "height: 100vh !important;"
   ];
 
   // All skills with matching icons
@@ -87,7 +84,7 @@ export default function Hero() {
             className="mb-6"
           >
             <span className="text-lg md:text-xl font-mono text-cyan-400">
-              {"<NoursHome />"}
+              {"<NourYahyaouiiiiii />"}
             </span>
           </motion.div>
 
