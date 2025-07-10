@@ -10,6 +10,7 @@ import {
   X,
   Instagram,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 
@@ -111,13 +112,13 @@ const Header = () => {
         >
           <motion.div className="flex space-x-8 items-center">
             {navItems.map((item) => (
-              <motion.a
+                <motion.div
                 key={item.name}
-                href={item.href}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 text-gray-300 hover:text-white text-sm font-medium transition-colors"
-              >
+                >
+                <a href={item.href} tabIndex={-1} className="sr-only">{item.name}</a>
                 <motion.span
                   variants={iconVariants}
                   whileHover="hover"
@@ -125,8 +126,10 @@ const Header = () => {
                 >
                   {item.icon}
                 </motion.span>
-                <span>{item.name}</span>
-              </motion.a>
+                <span>
+                  <Link to={item.href}>{item.name}</Link>
+                </span>
+                </motion.div>
             ))}
           </motion.div>
 
@@ -191,24 +194,28 @@ const Header = () => {
             >
               <motion.div className="flex flex-col space-y-8 items-center mt-8">
                 {navItems.map((item) => (
-                  <motion.a
+                    <motion.div
                     key={item.name}
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
                     variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-4 text-gray-300 hover:text-white text-xl font-medium w-full justify-center"
-                  >
-                    <motion.span
+                    >
+                    <Link
+                      to={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="flex items-center gap-4 w-full justify-center"
+                    >
+                      <motion.span
                       variants={iconVariants}
                       whileHover="hover"
                       whileTap="tap"
-                    >
+                      >
                       {item.icon}
-                    </motion.span>
-                    <span>{item.name}</span>
-                  </motion.a>
+                      </motion.span>
+                      <span>{item.name}</span>
+                    </Link>
+                    </motion.div>
                 ))}
 
                 <motion.div

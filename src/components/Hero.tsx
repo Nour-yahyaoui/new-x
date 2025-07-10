@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
 import { Code, Cpu, Database, GitBranch, Github, Rocket, Sparkles, Terminal } from "lucide-react";
+import { Link } from "react-router-dom";
 import { useRef, useState } from "react";
 
 export default function Hero() {
@@ -250,7 +251,9 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center gap-2">
+                <Link to={'/contact'}>
                 Let's Build Something Awesome
+                </Link>
                 <motion.span
                   animate={{ 
                     x: [0, 4, -4, 0],
