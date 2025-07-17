@@ -13,10 +13,9 @@ import {
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
 
   // Close menu when clicking outside on mobile
   useEffect(() => {
@@ -52,7 +51,10 @@ const Header = () => {
 
   const socialIcons = [
     { icon: <Github size={20} />, href: "https://github.com/nour-yahyaoui" },
-    {icon: <Instagram size={20} />, href: "https://instagram.com/nourr_yahyaouiii"},
+    {
+      icon: <Instagram size={20} />,
+      href: "https://instagram.com/nourr_yahyaouiii",
+    },
     {
       icon: <Linkedin size={20} />,
       href: "https://www.linkedin.com/in/nourr-yahyaoui-86987b36b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -96,10 +98,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-black bg-opacity-70 backdrop-blur-md"
-          : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all h-screen duration-300 ${
+        isMenuOpen ? "bg-black backdrop-blur-lg" : ""
       }`}
     >
       <div className="container mx-auto px-6 py-4">
@@ -112,13 +112,15 @@ const Header = () => {
         >
           <motion.div className="flex space-x-8 items-center">
             {navItems.map((item) => (
-                <motion.div
+              <motion.div
                 key={item.name}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="flex items-center gap-2 text-gray-300 hover:text-white text-sm font-medium transition-colors"
-                >
-                <a href={item.href} tabIndex={-1} className="sr-only">{item.name}</a>
+              >
+                <a href={item.href} tabIndex={-1} className="sr-only">
+                  {item.name}
+                </a>
                 <motion.span
                   variants={iconVariants}
                   whileHover="hover"
@@ -129,7 +131,7 @@ const Header = () => {
                 <span>
                   <Link to={item.href}>{item.name}</Link>
                 </span>
-                </motion.div>
+              </motion.div>
             ))}
           </motion.div>
 
@@ -190,32 +192,32 @@ const Header = () => {
               animate="open"
               exit="closed"
               variants={menuVariants}
-              className="mobile-menu-container md:hidden fixed inset-0 bg-black bg-opacity-95 backdrop-blur-lg pt-24 px-6"
+              className="mobile-menu-container md:hidden fixed inset-0 bg-black bg-opacity-95 backdrop-blur-lg pt-24 px-6 z-40"
             >
               <motion.div className="flex flex-col space-y-8 items-center mt-8">
                 {navItems.map((item) => (
-                    <motion.div
+                  <motion.div
                     key={item.name}
                     variants={itemVariants}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-4 text-gray-300 hover:text-white text-xl font-medium w-full justify-center"
-                    >
+                  >
                     <Link
                       to={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className="flex items-center gap-4 w-full justify-center"
                     >
                       <motion.span
-                      variants={iconVariants}
-                      whileHover="hover"
-                      whileTap="tap"
+                        variants={iconVariants}
+                        whileHover="hover"
+                        whileTap="tap"
                       >
-                      {item.icon}
+                        {item.icon}
                       </motion.span>
                       <span>{item.name}</span>
                     </Link>
-                    </motion.div>
+                  </motion.div>
                 ))}
 
                 <motion.div

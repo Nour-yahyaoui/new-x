@@ -9,7 +9,7 @@ function HomePage() {
       <div className="-z-5 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
-          particleCount={900}
+          particleCount={400}
           particleSpread={15}
           speed={0.1}
           particleBaseSize={100}

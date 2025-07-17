@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Instagram, Linkedin, Mail, Phone, MapPin, MessageSquare } from "lucide-react";
 import Header from "../components/Header";
-import Home from "../components/BG";
+// import Home from "../components/BG";
 
 const ContactPage = () => {
   const socialIcons = [
@@ -73,10 +73,9 @@ const ContactPage = () => {
   return (
     <div className="h-auto relative overflow-hidden">
       <Header />
-      <div className="fixed top-0 left-0 -z-10 w-full h-full">
+      {/* <div className="fixed top-0 left-0 -z-10 w-full h-full">
         <Home />
-      </div>
-
+      </div> */}
       <motion.section
         id="contact"
         className="py-24 px-6"

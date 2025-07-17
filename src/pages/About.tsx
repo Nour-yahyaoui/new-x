@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import Header from "../components/Header";
-import Home from "../components/BG";
+// import Home from "../components/BG";
 import { Code, Cpu, Database, Terminal } from "lucide-react";
 
 const AboutPage = () => {
@@ -134,10 +134,9 @@ const AboutPage = () => {
 
         </div>
       </motion.section>
-      <div className="fixed top-0 left-0 -z-10 w-full h-full">
+      {/* <div className="fixed top-0 left-0 -z-10 w-full h-full">
         <Home />
-      </div>
-
+      </div> */}
     </div>
   );
 };

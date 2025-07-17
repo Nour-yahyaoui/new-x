@@ -48,12 +48,12 @@ export default function Hero() {
     { name: "Supabase", icon: <Database className="h-4 w-4 text-emerald-400" /> }
   ];
 
-  // Primary skills to show on mobile initially
+
   const primarySkills = skills.filter(skill => 
     ["Next.js", "TailwindCSS", "React", "Vite", "Supabase"].includes(skill.name)
   );
 
-  // Secondary skills (shown when expanded)
+
   const secondarySkills = skills.filter(skill => 
     !["Next.js", "TailwindCSS", "React", "Vite", "Supabase"].includes(skill.name)
   );
