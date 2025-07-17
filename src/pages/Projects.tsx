@@ -1,6 +1,5 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Header from "../components/Header";
 import Particles from "../bits/particles";
 import SpotlightCard from "../bits/SpotlightCard";
 
@@ -21,7 +20,7 @@ interface Project {
 
 const Projects: React.FC = () => {
   const projects: Project[] = [
-     {
+    {
       title: "ButtonCraft",
       description:
         "A collection of beautifully designed, ready-to-use button components with HTML/CSS and Tailwind CSS implementations, featuring a visual editor (coming soon).",
@@ -82,7 +81,7 @@ const Projects: React.FC = () => {
       isPrivate: true,
       note: "Personal project with sensitive data - demo access available upon request",
     },
-   {
+    {
       title: "Free Portfolio Templates",
       description:
         "A collection of 5 professional portfolio templates with modern designs, animations, and responsive layouts.",
@@ -94,7 +93,7 @@ const Projects: React.FC = () => {
         "Framer Motion",
         "Templates",
         "TypeScript",
-        "source code"
+        "source code",
       ],
       mainTag: "Next.js",
       liveDemo: "https://portfolio-templates-store.vercel.app/",
@@ -142,8 +141,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden">
-      <Header />
-       <div className="-z-5 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">
+      <div className="-z-5 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">
         <Particles
           particleColors={["#ffffff", "#ffffff"]}
           particleCount={900}
@@ -164,21 +162,22 @@ const Projects: React.FC = () => {
         variants={containerVariants}
       >
         <div className="container mx-auto">
-          <motion.div 
-            variants={itemVariants}
-            className="text-center mb-20"
-          >
+          <motion.div variants={itemVariants} className="text-center mb-20">
             <motion.h2
               className="text-5xl font-bold mb-6 text-white"
               whileHover={{ scale: 1.02 }}
             >
-              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Projects</span>
+              My{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
+                Projects
+              </span>
             </motion.h2>
             <motion.p
               className="text-xl text-gray-300 max-w-3xl mx-auto"
               whileHover={{ scale: 1.01 }}
             >
-              Crafting digital experiences with modern technologies and innovative solutions
+              Crafting digital experiences with modern technologies and
+              innovative solutions
             </motion.p>
           </motion.div>
 
@@ -200,7 +199,7 @@ const Projects: React.FC = () => {
                   >
                     <div className="h-full flex flex-col">
                       {/* Project Image */}
-                      <motion.div 
+                      <motion.div
                         className="relative h-48 mb-6 rounded-xl overflow-hidden"
                         whileHover={{ scale: 1.03 }}
                       >
@@ -209,7 +208,7 @@ const Projects: React.FC = () => {
                           alt={project.title}
                           className="w-full h-full object-cover"
                         />
-                        <motion.div 
+                        <motion.div
                           className="absolute bottom-3 left-3 px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-full shadow-lg"
                           initial={{ scale: 0.9, opacity: 0 }}
                           animate={{ scale: 1, opacity: 1 }}
@@ -218,26 +217,33 @@ const Projects: React.FC = () => {
                           {project.mainTag}
                         </motion.div>
                       </motion.div>
-                      
+
                       {/* Project Content */}
                       <div className="flex-grow">
-                        <h3 className="text-xl font-bold mb-3 text-white">{project.title}</h3>
-                        <p className="text-gray-300 mb-5">{project.description}</p>
-                        
+                        <h3 className="text-xl font-bold mb-3 text-white">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-300 mb-5">
+                          {project.description}
+                        </p>
+
                         {/* Tags */}
                         <div className="flex flex-wrap gap-2 mb-6">
                           {project.tags.map((tag, i) => (
                             <motion.span
                               key={i}
                               className="px-3 py-1 bg-white/10 text-gray-200 text-xs rounded-full backdrop-blur-sm"
-                              whileHover={{ scale: 1.1, backgroundColor: "rgba(255,255,255,0.2)" }}
+                              whileHover={{
+                                scale: 1.1,
+                                backgroundColor: "rgba(255,255,255,0.2)",
+                              }}
                             >
                               {tag}
                             </motion.span>
                           ))}
                         </div>
                       </div>
-                      
+
                       {/* Action Buttons */}
                       <div className="flex gap-3 mt-auto">
                         {project.liveDemo && (

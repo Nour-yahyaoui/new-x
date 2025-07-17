@@ -98,8 +98,8 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all h-screen duration-300 ${
-        isMenuOpen ? "bg-black backdrop-blur-lg" : ""
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isMenuOpen ? "bg-black backdrop-blur-lg  h-screen" : "bg-black/80 "
       }`}
     >
       <div className="container mx-auto px-6 py-4">

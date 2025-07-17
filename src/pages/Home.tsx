@@ -1,6 +1,6 @@
 import Particles from "../bits/particles";
 import Home from "../components/BG";
-import Header from "../components/Header";
+
 import Hero from "../components/Hero";
 
 function HomePage() {
@@ -18,7 +18,7 @@ function HomePage() {
           disableRotation={true}
         />
       </div>
-      <Header />
+
       <Hero />
       <div className="flex-1 fixed -z-10 top-5 left-0 w-full min-h-screen">
         <Home />
