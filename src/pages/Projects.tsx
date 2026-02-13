@@ -21,6 +21,26 @@ interface Project {
 const Projects: React.FC = () => {
   const projects: Project[] = [
     {
+      title: "DevDash",
+      description:
+        "A comprehensive developer dashboard featuring HTML/CSS/JavaScript courses, interactive code playground, UI components library, themes gallery, and AI prompts - all built with Next.js 14, TypeScript, and Tailwind CSS.",
+      image:
+        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "Next.js 14",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "React Icons",
+        "Dashboard",
+        "Educational",
+        "Interactive",
+      ],
+      mainTag: "Next.js",
+      liveDemo: "https://devdash-ten.vercel.app/",
+      code: "https://github.com/nour-yahyaoui/devdash",
+    },
+    {
       title: "ButtonCraft",
       description:
         "A collection of beautifully designed, ready-to-use button components with HTML/CSS and Tailwind CSS implementations, featuring a visual editor (coming soon).",
@@ -98,16 +118,6 @@ const Projects: React.FC = () => {
       mainTag: "Next.js",
       liveDemo: "https://portfolio-templates-store.vercel.app/",
       code: "https://github.com/nour-yahyaoui/portfolio-templates/",
-    },
-    {
-      title: "Django Chat Application",
-      description:
-        "A real-time chat application built with Django Channels, featuring instant messaging, user authentication, and multiple chat rooms.",
-      image:
-        "https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80",
-      tags: ["Django", "Channels", "Python", "SQL", "Fullstack"],
-      mainTag: "Django",
-      code: "https://github.com/nour-yahyaoui/chat-app/",
     },
   ];
 

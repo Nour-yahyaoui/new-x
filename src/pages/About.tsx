@@ -49,7 +49,8 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="md:h-[calc(100vh-50px)] h-auto relative overflow-hidden">
+    // FIXED: Removed overflow-hidden and adjusted height classes
+    <div className="min-h-screen md:min-h-[calc(100vh-50px)] h-auto relative">
       <motion.section
         id="about"
         className="py-24 px-6"
