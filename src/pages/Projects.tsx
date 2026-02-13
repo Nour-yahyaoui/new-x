@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
       ],
       mainTag: "Next.js",
       liveDemo: "https://devdash-ten.vercel.app/",
-      code: "https://github.com/nour-yahyaoui/devdash",
+      code: "https://github.com/nour-yahyaoui/devdash-online-tools",
     },
     {
       title: "ButtonCraft",
