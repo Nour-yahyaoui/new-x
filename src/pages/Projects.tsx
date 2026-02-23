@@ -114,6 +114,95 @@ const Projects: React.FC = () => {
       note: "Static demo page - Full React version in development",
     },
     {
+      title: "FakeShop - Basic E-commerce",
+      description:
+        "A very basic e-commerce demo application built to showcase product listing and shopping cart functionality with a clean, simple interface.",
+      image:
+        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "React",
+        "E-commerce",
+        "Demo",
+        "Shopping Cart",
+        "Basic",
+      ],
+      mainTag: "React",
+      liveDemo: "https://fake-shop-demo.vercel.app/",
+      note: "Basic demo version",
+    },
+    {
+      title: "ExpertComptable - Portfolio Design",
+      description:
+        "A static HTML/TailwindCSS design concept for an accounting professional's portfolio. This is a design prototype and not intended for production use.",
+      image:
+        "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "HTML",
+        "Tailwind CSS",
+        "Design",
+        "Prototype",
+        "Portfolio",
+        "Static",
+      ],
+      mainTag: "HTML/CSS",
+      liveDemo: "https://nour-yahyaoui.github.io/expert/",
+      code: "https://github.com/Nour-yahyaoui/expert",
+      underConstruction: true,
+      note: "Design concept only - not for production",
+    },
+    {
+      title: "Ghassen Studio - Designer Portfolio",
+      description:
+        "A modern, visually striking portfolio website for a designer, built with Vite for optimal performance and smooth animations.",
+      image:
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "Vite",
+        "React",
+        "Portfolio",
+        "Design",
+        "Modern UI",
+        "Animations",
+      ],
+      mainTag: "Vite",
+      liveDemo: "https://ghassen-studio.vercel.app/",
+      note: "Designer portfolio - code not available",
+    },
+    {
+      title: "Todo App - Basic",
+      description:
+        "A very basic todo application for task management, demonstrating core CRUD operations with a simple and intuitive interface.",
+      image:
+        "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80",
+      tags: [
+        "JavaScript",
+        "Todo App",
+        "Basic",
+        "CRUD",
+        "Task Management",
+      ],
+      mainTag: "JavaScript",
+      code: "https://github.com/Nour-yahyaoui/todo",
+      note: "Basic todo app - no live demo available",
+    },
+    {
+      title: "Password Generator",
+      description:
+        "An ultra-basic password generator tool that creates secure, random passwords with customizable length and character options.",
+      image:
+        "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "JavaScript",
+        "Password Generator",
+        "Tool",
+        "Basic",
+        "Utility",
+      ],
+      mainTag: "JavaScript",
+      liveDemo: "https://generator-one-ecru.vercel.app/",
+      code: "https://github.com/Nour-yahyaoui/generator",
+    },
+    {
       title: "NF-Team",
       description:
         "A collaborative web development team project featuring modern UI/UX design and full-stack functionality.",
@@ -352,6 +441,14 @@ const Projects: React.FC = () => {
                             whileHover={{ scale: 1.01 }}
                           >
                             Code Private
+                          </motion.div>
+                        )}
+                        {!project.liveDemo && !project.code && (
+                          <motion.div
+                            className="px-4 py-2 bg-white/5 text-gray-400 rounded-lg font-medium flex-grow text-center text-sm"
+                            whileHover={{ scale: 1.01 }}
+                          >
+                            No Links Available
                           </motion.div>
                         )}
                       </div>
