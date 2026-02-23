@@ -6,12 +6,12 @@ const AboutPage = () => {
   const skills = [
     {
       name: "Frontend",
-      technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      technologies: ["React", "Next.js","Vite" ,"Tailwind CSS", "TypeScript"],
       icon: <Code className="w-5 h-5" />,
     },
     {
       name: "Backend",
-      technologies: ["Supabase", "Python", "SQL"],
+      technologies: ["Neon db", "Python", "SQL"],
       icon: <Database className="w-5 h-5" />,
     },
     {

@@ -92,7 +92,27 @@ const Projects: React.FC = () => {
       liveDemo: "https://commerce-asp.vercel.app/",
       code: "https://github.com/Nour-yahyaoui/commerce-asp",
     },
-   
+    {
+      title: "ShopOn - E-commerce Demo",
+      description:
+        "An e-commerce demo HTML page showcasing product layout and design. Currently a static prototype awaiting full React implementation with enhanced functionality.",
+      image:
+        "https://images.unsplash.com/photo-1472851294608-062f824d29cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "HTML",
+        "CSS",
+        "Demo",
+        "Static Page",
+        "E-commerce",
+        "Prototype",
+        "Under Development",
+      ],
+      mainTag: "HTML/CSS",
+      liveDemo: "https://nour-yahyaoui.github.io/shopon/",
+      code: "https://github.com/Nour-yahyaoui/shopon",
+      underConstruction: true,
+      note: "Static demo page - Full React version in development",
+    },
     {
       title: "NF-Team",
       description:
@@ -262,6 +282,16 @@ const Projects: React.FC = () => {
                         >
                           {project.mainTag}
                         </motion.div>
+                        {project.underConstruction && (
+                          <motion.div
+                            className="absolute top-3 right-3 px-3 py-1 bg-amber-500/90 text-white text-xs font-medium rounded-full backdrop-blur-sm shadow-lg"
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ delay: 0.5 }}
+                          >
+                            🚧 In Development
+                          </motion.div>
+                        )}
                       </motion.div>
 
                       {/* Project Content */}
@@ -325,6 +355,18 @@ const Projects: React.FC = () => {
                           </motion.div>
                         )}
                       </div>
+                      
+                      {/* Optional note */}
+                      {project.note && (
+                        <motion.p
+                          className="text-xs text-gray-400 mt-3 italic"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.6 }}
+                        >
+                          ℹ️ {project.note}
+                        </motion.p>
+                      )}
                     </div>
                   </SpotlightCard>
                 </motion.div>
