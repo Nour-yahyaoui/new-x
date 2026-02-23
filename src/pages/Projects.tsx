@@ -58,6 +58,42 @@ const Projects: React.FC = () => {
       code: "https://github.com/nour-yahyaoui/button-gen",
     },
     {
+      title: "Apex - Full Stack E-commerce",
+      description:
+        "A fully functional e-commerce application built with Vite, featuring a separate admin dashboard, product management, shopping cart, and secure checkout process.",
+      image:
+        "https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+      tags: [
+        "Vite",
+        "React",
+        "E-commerce",
+        "Admin Dashboard",
+        "Full Stack",
+        "Shopping Cart",
+      ],
+      mainTag: "Vite",
+      liveDemo: "https://apex-plague.vercel.app/",
+      code: "https://github.com/Nour-yahyaoui/apex",
+    },
+    {
+      title: "Commerce ASP - E-commerce Frontend",
+      description:
+        "A modern e-commerce frontend application with product listings, shopping cart functionality, and responsive design built with React.",
+      image:
+        "https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      tags: [
+        "React",
+        "E-commerce",
+        "Frontend",
+        "Shopping Cart",
+        "Responsive",
+      ],
+      mainTag: "React",
+      liveDemo: "https://commerce-asp.vercel.app/",
+      code: "https://github.com/Nour-yahyaoui/commerce-asp",
+    },
+   
+    {
       title: "NF-Team",
       description:
         "A collaborative web development team project featuring modern UI/UX design and full-stack functionality.",
