@@ -88,7 +88,7 @@ const AboutPage = () => {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 backdrop-blur-sm" />
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-8xl opacity-20">👨‍💻</div>
+                 <img src="/image.png" alt="" />
                 </div>
                 <div className="relative h-full flex flex-col justify-end p-6">
                   <h3 className="text-xl font-bold text-white">
