@@ -1,9 +1,13 @@
+import { useEffect } from "react";
 import Particles from "../bits/particles";
 import Home from "../components/BG";
 
 import Hero from "../components/Hero";
 
 function HomePage() {
+   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <div className="-z-5 h-screen bg-transparent w-full fixed top-0 left-0 min-h-screen">

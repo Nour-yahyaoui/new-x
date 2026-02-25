@@ -17,35 +17,25 @@ export default function Hero() {
   // Coding meme phrases
   const memes = [
     "// TODO: Add more memes",
-    "const bugs = features;",
     "async await my coffee",
     "git commit -m 'fix previous commit'",
-    "404: Sleep Not Found",
     "NaN hours of debugging",
-    "!important",
     "hacking microsoft",
-    "mining crypto",
     "10/0 bugs fixed",
-    "left: 50%; transform: translateX(-50%);",
     "console.log('why is this not working?')",
     "margin: 0 auto; /* magic */",
   ];
 
   // All skills with matching icons
   const skills = [
-    { name: "HTML", icon: <Code className="h-4 w-4 text-orange-500" /> },
-    { name: "CSS", icon: <Code className="h-4 w-4 text-blue-500" /> },
-    { name: "JavaScript", icon: <Code className="h-4 w-4 text-yellow-400" /> },
     { name: "TypeScript", icon: <Terminal className="h-4 w-4 text-cyan-400" /> },
-    { name: "Python", icon: <Code className="h-4 w-4 text-emerald-400" /> },
-    { name: "SQL", icon: <Database className="h-4 w-4 text-blue-400" /> },
     { name: "TailwindCSS", icon: <Sparkles className="h-4 w-4 text-cyan-300" /> },
     { name: "Git", icon: <GitBranch className="h-4 w-4 text-orange-400" /> },
     { name: "GitHub", icon: <Github className="h-4 w-4 text-gray-100" /> },
     { name: "Next.js", icon: <Cpu className="h-4 w-4 text-white" /> },
     { name: "React", icon: <Code className="h-4 w-4 text-blue-400" /> },
     { name: "Vite", icon: <Rocket className="h-4 w-4 text-purple-400" /> },
-    { name: "Supabase", icon: <Database className="h-4 w-4 text-emerald-400" /> }
+    { name: "neon db", icon: <Database className="h-4 w-4 text-emerald-400" /> }
   ];
 
 
@@ -238,6 +228,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="relative group"
           >
+            <Link to={'/about'}>
             <motion.button
               whileHover={{ 
                 scale: 1.05,
@@ -251,9 +242,9 @@ export default function Hero() {
               }}
             >
               <span className="relative z-10 flex items-center gap-2">
-                <Link to={'/contact'}>
-                Let's Build Something Awesome
-                </Link>
+                
+                Let's go
+                
                 <motion.span
                   animate={{ 
                     x: [0, 4, -4, 0],
@@ -272,6 +263,7 @@ export default function Hero() {
                 transition={{ duration: 3, repeat: Infinity }}
               />
             </motion.button>
+            </Link>
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-300 -z-10" />
           </motion.div>
         </div>

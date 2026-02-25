@@ -5,7 +5,6 @@ import {
   Folder,
   Mail,
   Github,
-  Linkedin,
   Menu,
   X,
   Instagram,
@@ -55,10 +54,7 @@ const Header = () => {
       icon: <Instagram size={20} />,
       href: "https://instagram.com/nourr_yahyaouiii",
     },
-    {
-      icon: <Linkedin size={20} />,
-      href: "https://www.linkedin.com/in/nourr-yahyaoui-86987b36b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
+  
     { icon: <Mail size={20} />, href: "mailto:nourryahyaoui@gmail.com" },
   ];
 
@@ -143,8 +139,6 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={iconVariants}
-                whileHover="hover"
-                whileTap="tap"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 {social.icon}
@@ -173,8 +167,6 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 variants={iconVariants}
-                whileHover="hover"
-                whileTap="tap"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 {social.icon}

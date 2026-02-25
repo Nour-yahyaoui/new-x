@@ -30,8 +30,8 @@ uniform vec2 uMouse;
 
 #define PI 3.1415926538
 
-const int u_line_count = 20;
-const float u_line_width = 7.0;
+const int u_line_count = 10;
+const float u_line_width = 10.0;
 const float u_line_blur = 10.0;
 
 float Perlin2D(vec2 P) {

@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Github, Instagram, Mail } from "lucide-react";
 
 const Footer = () => {
   const socialIcons = [
     { icon: <Github size={16} />, href: "https://github.com/nour-yahyaoui" },
     { icon: <Instagram size={16} />, href: "https://instagram.com/nourr_yahyaouiii" },
-    { icon: <Linkedin size={16} />, href: "https://www.linkedin.com/in/nourr-yahyaoui-86987b36b" },
     { icon: <Mail size={16} />, href: "mailto:nourryahyaoui@gmail.com" }
   ];
 
