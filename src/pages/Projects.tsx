@@ -20,6 +20,18 @@ interface Project {
 
 const projects: Project[] = [
   {
+    title: "EduPlatform akinji - Learning Management System",
+    description:
+      "Complete educational platform with course management, task tracking, exam scheduling, and user authentication. Features include user-defined task categories, saved courses, and responsive design.",
+    image:
+      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Zustand", "Neon DB", "PostgreSQL"],
+    mainTag: "Full Stack",
+    liveDemo: "https://akinji.vercel.app/", // Replace with your actual URL
+    code: "https://github.com/nour-yahyaoui/akinji", // Replace with your actual repo
+    note: "Full-stack project with serverless PostgreSQL",
+  },
+  {
     title: "DevDash",
     description:
       "Developer dashboard with courses, playground, UI components, and AI prompts.",
