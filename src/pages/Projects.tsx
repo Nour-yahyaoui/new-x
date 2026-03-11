@@ -19,6 +19,29 @@ interface Project {
 }
 
 const projects: Project[] = [
+   {
+    title: "YourNewPort - Multi-tenant E-commerce Platform",
+    description:
+      "Complete multi-tenant e-commerce platform where each user gets their own customizable store. Features include seller dashboard with product/order management, image uploads to ImgBB, multi-tenant data isolation, Cash on Delivery system, and a beautiful storefront for each tenant. Built with PostgreSQL and Neon DB for serverless data.",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    tags: [
+      "Next.js 16", 
+      "TypeScript", 
+      "Tailwind CSS", 
+      "PostgreSQL", 
+      "Neon DB", 
+      "Multi-tenant", 
+      "Serverless", 
+      "ImgBB API",
+      "Zustand",
+      "Authentication"
+    ],
+    mainTag: "Full Stack",
+    liveDemo: "https://yournewport.vercel.app/",
+    code: "https://github.com/nour-yahyaoui/yournewport",
+    note: "Multi-tenant e-commerce with serverless PostgreSQL",
+  },
   {
     title: "EduPlatform akinji - Learning Management System",
     description:
