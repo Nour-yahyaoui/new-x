@@ -6,7 +6,6 @@
 </p>
 
 ---
-
 ### 👨‍💻 About Me
 
 🎓 19-year-old full-stack developer from Tunisia, **3 years of freelance/client experience**.
