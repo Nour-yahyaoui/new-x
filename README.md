@@ -58,16 +58,7 @@ This repo is my personal portfolio site, built with **Next.js** (App Router) and
 
 ---
 
-### 🚀 Running this project
 
-```bash
-npm install
-npm run dev
-```
-
-Then open [http://localhost:3000](http://localhost:3000).
-
----
 
 ### 📫 Let's Connect
 
