@@ -1,0 +1,77 @@
+// Central place for site-wide SEO constants.
+// IMPORTANT: update SITE_URL to your real production domain before deploying,
+// and set it as the NEXT_PUBLIC_SITE_URL env var on Vercel.
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
+  "https://nour-yahyaoui.vercel.app";
+
+export const SITE_NAME = "Nour Yahyaoui | Full-Stack Developer";
+export const AUTHOR_NAME = "Nour Yahyaoui";
+export const AUTHOR_EMAIL = "nourryahyaoui@gmail.com";
+export const TWITTER_HANDLE = ""; // add if/when a Twitter/X handle exists
+
+export const DEFAULT_DESCRIPTION =
+  "Nour Yahyaoui is a full-stack developer from Tunisia specializing in React, Next.js, Node.js and PostgreSQL, with 3+ years of freelance experience building production web, mobile and desktop applications.";
+
+export const DEFAULT_KEYWORDS = [
+  "Nour Yahyaoui",
+  "Nour Yahyaoui developer",
+  "full-stack developer Tunisia",
+  "React developer Tunisia",
+  "Next.js developer",
+  "Node.js developer",
+  "PostgreSQL developer",
+  "freelance developer Tunisia",
+  "React Native developer",
+  "web developer Tunisia",
+  "software engineer Tunisia",
+  "Rust developer",
+];
+
+// Person structured data (JSON-LD) reused across pages.
+export function personJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: AUTHOR_NAME,
+    alternateName: "nour-yahyaoui",
+    url: SITE_URL,
+    image: `${SITE_URL}/port.png`,
+    email: `mailto:${AUTHOR_EMAIL}`,
+    jobTitle: "Full-Stack Developer",
+    description: DEFAULT_DESCRIPTION,
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "TN",
+      addressLocality: "Tunisia",
+    },
+    knowsAbout: [
+      "React",
+      "Next.js",
+      "Node.js",
+      "PostgreSQL",
+      "TypeScript",
+      "React Native",
+      "Rust",
+      "Full-Stack Development",
+    ],
+    sameAs: [
+      "https://github.com/nour-yahyaoui",
+      "https://instagram.com/nourr_yahyaouiii",
+      "https://www.linkedin.com/in/nourr-yahyaoui-86987b36b",
+    ],
+  };
+}
+
+export function websiteJsonLd() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    author: {
+      "@type": "Person",
+      name: AUTHOR_NAME,
+    },
+  };
+}
